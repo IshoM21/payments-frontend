@@ -1,0 +1,58 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* El body se encarga del centrado vertical/horizontal */
+    body {
+      min-height: 100vh; 
+      display: flex;
+      justify-content: center;          /* centra horizontalmente el contenedor */
+      align-items: center;              /* centra verticalmente mientras quepa */
+      padding: 1.5rem;
+    }
+
+    /* Contenedor de las cards */
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      width: 280px;
+      max-width: 100%;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      /* margin-bottom: 0.5rem; */
+      color : #111827;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #4b5563;
+    }
+
+    /* 📱 Versión móvil: cards en columna */
+    @media (max-width: 768px) {
+      .cards-wrapper {
+        flex-direction: column;   /* se apilan verticalmente */
+      }
+
+      .card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
